@@ -1,0 +1,168 @@
+/* Estilos base */
+body {  
+    background-color: #ECF8F8;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el tema oscuro */
+[data-bs-theme="dark"] {
+    --bs-body-color: #ffffff;
+}
+
+.btn{
+    background-color: #586776;
+    border-color:#586776;
+}
+
+.btn:hover {
+    background-color: #7f8b97; /* Cambia el color de fondo al hacer hover */
+    border-color: #7f8b97;
+    color: white;              /* Color del texto */
+    transition: background-color 0.3s ease; /* Suaviza el cambio */
+  }
+
+  .btn:active {
+    background-color: #7f8b97; /* Cambia el color de fondo al hacer hover */
+    border-color: #7f8b97;
+    color: white;              /* Color del texto */
+  }
+
+  .link{
+    color: #8995a1;
+  }
+
+  .link:hover{
+    color: #869099;
+  }
+
+  .mandatory{
+    color: red;
+  }
+
+  .container-divided {
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .top {
+    background-color: white;
+  }
+  
+  .bottom {
+    background-color: #4c5660;
+    height: 41%;
+  }
+  
+  /*footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+*/
+
+.btn-btn-light {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff; /* Gris Bootstrap, puedes cambiarlo */
+  padding: 0 0.75rem;
+  font-size: 1.25rem;
+}
+.btn-btn-light:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #ffffff !important; /* Color por defecto para tema claro */
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el navbar en tema oscuro */
+[data-bs-theme="dark"] .navbar {
+    background-color: #212529 !important; /* Gris oscuro para tema oscuro */
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #2c3034;
+    border-color: #495057;
+}
+
+[data-bs-theme="dark"] .btn-dark {
+    background-color: #495057;
+    border-color: #6c757d;
+}
+
+[data-bs-theme="dark"] .btn-dark:hover {
+    background-color: #6c757d;
+    border-color: #495057;
+}
+
+/* Estilos personalizados para el botón de tema */
+button#themeSwitch.theme-switch {
+    all: unset;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0;
+    margin: 0 0.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+button#themeSwitch.theme-switch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+button#themeSwitch.theme-switch:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #e9ecef;
+}
+
+button#themeSwitch.theme-switch svg {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+button#themeSwitch.theme-switch:hover svg {
+    transform: rotate(15deg);
+}
+
+[data-bs-theme="dark"] button#themeSwitch.theme-switch {
+    background-color: #343a40;
+    border-color: #495057;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+[data-bs-theme="dark"] button#themeSwitch.theme-switch:hover {
+    background-color: #495057;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
